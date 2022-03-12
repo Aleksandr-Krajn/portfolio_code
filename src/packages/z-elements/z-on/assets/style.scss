@@ -1,0 +1,61 @@
+.z-on {
+  display: flex;
+  align-items: flex-start;
+
+  &__check {
+    position: relative;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 3.2rem;
+    border: 2px solid #909399;
+    background-color: #909399;
+
+    &--checked {
+      border: 2px solid $light-blue-1000;
+      background-color: $light-blue-1000;
+    }
+
+    &--checked:hover {
+      border-color: $dark-blue-1000;
+      background: $dark-blue-1000;
+    }
+    
+    &--checked:disabled {
+      background-color: $dark-grey-200;
+    }
+  }
+
+  &__check:focus {
+    border-color: $dark-blue-1000;
+  }
+
+  &__check:disabled {
+    border-color: $dark-grey-200;
+  }
+
+  &__check:disabled ~ &__label {
+    color: $dark-grey-200;
+  }
+
+  &__circle {
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #fff;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+
+    &--active {
+      left: 2rem;
+    }
+  }
+
+  &__label {
+    font-size: $font-sm;
+    line-height: 2rem;
+    margin-left: 0.8rem;
+    color: $dark-grey-1000;
+    cursor: pointer;
+  }
+}

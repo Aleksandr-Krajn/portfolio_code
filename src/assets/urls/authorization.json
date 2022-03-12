@@ -1,0 +1,6 @@
+{
+  "login": "/auth/login",
+  "currentUser": "/auth/current_user",
+  "roles": "/admin/roles",
+  "permissions": "/admin/permissions"
+}

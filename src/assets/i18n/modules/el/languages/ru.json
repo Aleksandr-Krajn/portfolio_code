@@ -1,0 +1,9 @@
+{
+  "pagination": {
+    "goto": "Перейти на",
+    "pageClassifier": "страницу"
+  },
+  "select": {
+    "noData": "Нет данных"
+  }
+}

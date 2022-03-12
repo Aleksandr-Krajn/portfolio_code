@@ -1,0 +1,65 @@
+{
+  "namePage": "Пользователи",
+  "buttons": {
+    "addUser": "Добавить пользователя"
+  },
+  "drawers": {
+    "userEditor": {
+      "addUser": "Добавление пользователя",
+      "editUserData": "Изменение данных пользователя",
+      "enterLogin": "Введите логин",
+      "login": "Логин",
+      "enterUserFullName": "Введите ФИО пользователя или название аккаунта",
+      "shortFullName": "ФИО",
+      "selectRole": "Выберите роль",
+      "typeUserAdd": {
+        "local": "Локальное добавление",
+        "active": "Active Directory"
+      },
+      "status": {
+        "active": "Активный аккаунт",
+        "inactive": "Неактивный аккаунт"
+      },
+      "enterPassword": "Введите пароль",
+      "password": "Пароль",
+      "resetCurrentPassword": "Сбросить текущий пароль",
+      "cancelEdit": {
+        "text": "Вы уверены, что хотите выйти?",
+        "info": "Введенные данные невозможно будет восстановить"
+      },
+      "saveChanges": {
+        "text": "Вы действительно хотите сохранить изменения?",
+        "info": "Данное действие невозможно будет отменить"
+      }
+    }
+  },
+  "tables": {
+    "users": {
+      "header": {
+        "id": "ID",
+        "status": "Статус",
+        "fullName": "ФИО",
+        "role": "Роль",
+        "login": "Логин",
+        "createdDate": "Дата добавления",
+        "addPlace": "Место добавления"
+      }
+    }
+  },
+  "notices": {
+    "createUserSuccess": "Сотрудник {{name}} успешно создан",
+    "changesSavedSuccess": "Изменения успешно сохранены"
+  },
+  "modals": {
+    "userSuccessAdded": "Пользователь успешно добавлен!",
+    "provideDataForAuthorizationManager": "Сообщите данные для авторизации руководителю",
+
+    "resetPassword": {
+      "youSureWantResetPassword": "Вы уверены, что хотите сбросить пароль?",
+      "actionCannotRestored": "Данное действие невозможно будет восстановить",
+      "reset": "Сбросить пароль",
+      "succesReset": "Пароль успешно изменен!",
+      "errorReset": "Ошибка сброса пароля"
+    }
+  }
+}

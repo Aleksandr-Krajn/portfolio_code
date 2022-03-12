@@ -1,0 +1,22 @@
+.z-table-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .el-icon-check {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .el-checkbox__inner {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .el-checkbox__inner::after {
+    width: 5px;
+    height: 9px;
+    border-width: 1.5px;
+    left: 4.5px;
+  }
+}

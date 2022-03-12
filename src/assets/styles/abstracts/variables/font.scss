@@ -1,0 +1,132 @@
+@use "sass:map";
+@use "sass:list";
+@use "../_functions.scss";
+
+$font-weights: (
+  medium: 500,
+  regular: 400,
+  bold: bold,
+) !default;
+
+$typography: (
+  title-1: (
+    any: (
+      medium: (
+        font-weight: map.get($font-weights, "medium"),
+        font-size: 24px,
+        line-height: 35px,
+      )
+    ),
+  ),
+
+  title-2: (
+    any: (
+      medium: (
+        font-weight: map.get($font-weights, "medium"),  
+        font-size: 20px,
+        line-height: 29px,
+      )
+    ),
+  ),
+
+  text-1: (
+    any: (
+      regular: (
+        font-weight: map.get($font-weights, "regular"),
+        font-size: 16px,
+        line-height: 23px,
+      ),
+      medium: (
+        font-weight: map.get($font-weights, "medium"),
+        font-size: 16px,
+        line-height: 22px,
+      ),
+      bold: (
+        font-weight: map.get($font-weights, "bold"),
+        font-size: 16px,
+        line-height: 23px,
+      )
+    ),
+  ),
+
+  text-2: (
+    any: (
+      regular: (
+        font-weight: map.get($font-weights, "regular"),
+        font-size: 14px,
+        line-height: 20px,
+      ),
+      medium: (
+        font-weight: map.get($font-weights, "medium"),
+        font-size: 14px,
+        line-height: 20px,
+      ),
+      bold: (
+        font-weight: map.get($font-weights, "bold"),
+        font-size: 14px,
+        line-height: 20px,
+      )
+    ),
+  ),
+
+  subtitle: (
+    any: (
+      regular: (
+        font-weight: map.get($font-weights, "regular"),
+        font-size: 12px,
+        line-height: 17px,
+      ),
+      medium: (
+        font-weight: map.get($font-weights, "medium"),
+        font-size: 15px,
+        line-height: 20px,
+      ),
+      bold: (
+        font-weight: map.get($font-weights, "bold"),
+        font-size: 12px,
+        line-height: 17px,
+      )
+    ),
+  ),
+) !default;
+
+// Применяет все передаваемые своства со значениями к указанному элементу применения
+@mixin bind-attrs($attrs) {
+  @if $attrs {
+    $keys: map.keys($attrs);
+    @each $key in $keys {
+      #{ $key }: map.get($attrs, $key);
+    }
+  }
+}
+
+// Вспомогательный миксин для применения внутри классов стили шрифтов
+// Пример использования:
+// @include font-include("title-1_medium") - применится device: any
+// @include font-include("title-1_xl_medium") - применится device: xl
+@mixin font-include($name, $font-family: $font-family, $font-style: normal) {
+  $keys: str-split($name, '_');
+  $length-keys: length($keys);
+  @if $length-keys == 2 {
+    $keys: insert-nth($keys, 2, any);
+    $length-keys: length($keys);
+  }
+  @if $length-keys == 3 {
+    $device: list.nth($keys, 2);
+    $is-any: $device == any;
+    @if map.has-key($devices, $device) and map.has-key($typography, $keys...) {
+      $typography-values: map.get($typography, $keys...);
+      @if ($is-any) {
+        font-family: $font-family;
+        font-style: normal;
+        @include bind-attrs($typography-values);
+      } @else {
+        @media screen and (min-width: (map.get($devices, $device) + 0px)) {
+          font-family: $font-family;
+          font-style: normal;
+          @include bind-attrs($typography-values);
+        }
+      }
+    }
+  }
+}

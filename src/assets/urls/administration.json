@@ -1,0 +1,12 @@
+{
+  "roles": "/admin/roles",
+  "role": "/admin/role",
+  "specificRole": "/admin/role/:id",
+
+  "users": "/admin/users",
+  "user": "/admin/user",
+  "specificUser": "/admin/user/:id",
+  "userPassword": "/admin/user/:id/password",
+
+  "permissionGroups": "/admin/permission_groups"
+}

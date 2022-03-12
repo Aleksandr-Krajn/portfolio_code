@@ -1,0 +1,16 @@
+.table {
+  ::-webkit-scrollbar {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3.5px;
+    border-radius: 3.5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    -webkit-border-radius: 3.5px;
+    border-radius: 3.5px; 
+  }
+}

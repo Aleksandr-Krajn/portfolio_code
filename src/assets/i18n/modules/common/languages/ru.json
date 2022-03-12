@@ -1,0 +1,66 @@
+{
+  "buttons": {
+    "cancel": "Отменить",
+    "change": "Изменить",
+    "delete": "Удалить",
+    "error": "Ошибка",
+    "exit": "Выйти",
+    "ok": "OK",
+    "save": "Сохранить",
+    "saveChanges": "Сохранить изменения",
+    "resetChanges": "Сбросить изменения"
+  },
+
+  "fields": {
+    "active": "Активный",
+    "activeDirectory": "Active Directory",
+    "all": "Все",
+    "end": "Конец",
+    "inactive": "Неактивный",
+    "locally": "Локально",
+    "login": "Логин",
+    "ordering": "Сортировка",
+    "password": "Пароль",
+    "place": "Место",
+    "selectedAll": "Выбрать все",
+    "start": "Начало"
+  },
+
+  "modals": {
+    "SuccessEditUserPassword": {
+      "copiedLoginAndPassword": "Логин и пароль скопированы"
+    },
+    "MessageBox": {
+      "errorSavingData": "Ошибка сохранения данных"
+    }
+  },
+
+  "supportInfo": {
+    "departament": "Отдел системного администрирования",
+    "phone": "тел. 8 (000) 000 00 00"
+  },
+
+  "menu": {
+    "profile": "Профиль"
+  },
+
+  "components": {
+    "Filters": {
+      "resetFilters": "Сбросить фильтры"
+    }
+  },
+
+  "errors": {
+    "input": {
+      "minLength": "Поле должно содержать минимум {{number}} символов"
+    }
+  },
+    
+  "mask": {
+    "date": "дд.мм.гггг"
+  },
+
+  "notice": {
+    "attention": "Внимание"
+  }
+}

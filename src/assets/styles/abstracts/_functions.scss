@@ -1,0 +1,54 @@
+@use "sass:list";
+
+// Метод добавления в список элемента по индексу
+@function insert-nth($list, $index, $value) {
+  $result: null;
+
+  @if type-of($index) != number {
+    @warn "$index: #{quote($index)} is not a number for `insert-nth`.";
+  } @else if $index < 1 {
+    @warn "List index 0 must be a non-zero integer for `insert-nth`";
+  } @else if $index > length($list) {
+    @warn "List index is #{$index} but list is only #{length($list)} item long for `insert-nth'.";
+  } @else {
+    $result: ();
+
+    @for $i from 1 through length($list) {
+      @if $i == $index {
+        $result: append($result, $value);
+      }
+
+      $result: append($result, nth($list, $i));
+    }
+  }
+
+  @return $result;
+}
+
+// Метод разделения строки на список
+@function str-split($string, $separator: ' ') {
+  $result: null;
+
+  @if type-of($string) != string {
+    @warn "$string: #{ quote($string) } is not a string for `str-split`.";
+  } @else {
+    $result: ();
+    $tmp-str: str-slice($string, 0);
+
+    @while str-index($tmp-str, $separator) != null {
+      $index: str-index($tmp-str, $separator);
+      $tmp: str-slice($tmp-str, 0, $index - 1);
+      $tmp-str: str-slice($tmp-str, $index + 1);
+
+      @if length($tmp) > 0 {
+        $result: list.append($result, $tmp);
+      }
+    }
+
+    @if length($tmp-str) > 0 {
+      $result: list.append($result, $tmp-str);
+    }
+  }
+
+  @return $result;
+}

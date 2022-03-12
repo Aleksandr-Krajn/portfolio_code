@@ -1,0 +1,7 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.33 18V16.3333C16.33 15.4493 15.9789 14.6014 15.3539 13.9763C14.729 13.3512 13.8813 13 12.9975 13H6.3325C5.44867 13 4.60103 13.3512 3.97607 13.9763C3.3511 14.6014 3 15.4493 3 16.3333V18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.335 9.67C11.1769 9.67 12.67 8.17687 12.67 6.335C12.67 4.49313 11.1769 3 9.335 3C7.49313 3 6 4.49313 6 6.335C6 8.17687 7.49313 9.67 9.335 9.67Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.6939 9.04895C17.4302 9.05684 18.0207 9.66015 18.0128 10.3965C18.0049 11.1328 17.4016 11.7234 16.6653 11.7155C15.929 11.7076 15.3384 11.1043 15.3463 10.3679C15.3542 9.63158 15.9575 9.04105 16.6939 9.04895Z" stroke="black" stroke-width="0.666667" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="0.333333" y1="-0.333333" x2="3" y2="-0.333333" transform="matrix(0.999943 0.0107157 0.0107157 -0.999943 12.0195 9.66602)" stroke="black" stroke-width="0.666667" stroke-linecap="round"/>
+<line x1="0.333333" y1="-0.333333" x2="1.66667" y2="-0.333333" transform="matrix(0.0107157 -0.999943 -0.999943 -0.0107157 12.668 11.6738)" stroke="black" stroke-width="0.666667" stroke-linecap="round"/>
+</svg>

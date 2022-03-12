@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  box-sizing: border-box;
+}
+
+button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+html {
+  word-wrap: break-word;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $font-default;
+  box-sizing: border-box;
+  color: $dark-grey-1000;
+}
+
+button, a, input {
+  outline: none;
+}
+
+.decoration-none {
+  text-decoration: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.font-xs {
+  font-size: $font-xs;
+}
+
+.font-sm {
+  font-size: $font-sm;
+}
+
+.font-default {
+  font-size: $font-default;
+} 
+
+.font-md {
+  font-size: $font-md;
+}
+
+.font-lg {
+  font-size: $font-lg;
+}
+
+.weight-500 {
+  font-weight: 500;
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
+::-webkit-scrollbar {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $light-grey-1000;
+  -webkit-border-radius: 4.5px;
+  border-radius: 4.5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $dark-grey-100;
+  -webkit-border-radius: 4.5px;
+  border-radius: 4.5px; 
+}
+
+.iz-field {
+  &_required::after {
+    content: '*';
+    margin-left: 4px;
+  }
+}

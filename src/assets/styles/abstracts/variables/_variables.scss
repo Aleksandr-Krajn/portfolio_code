@@ -1,0 +1,16 @@
+// Fonts
+$font-family: 'Noto Sans SC', sans-serif;
+
+$font-xxs: 1rem;
+$font-xs: 1.2rem;
+$font-sm: 1.4rem;
+$font-default: 1.6rem;
+$font-md: 2rem;
+$font-lg: 2.4rem;
+
+// На текущий момент существует только одно разрешение для макетов
+$devices: (
+  any: null, // Устройство универсального разрешение,
+) !default;
+
+$devices-list: map-keys($devices) !default;

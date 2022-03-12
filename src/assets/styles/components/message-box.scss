@@ -1,0 +1,27 @@
+.message-box {
+  font-size: $font-default;
+  font-weight: bold;
+
+  .el-message-box__status {
+    font-size: 40px !important;
+    padding: 0;
+  }
+
+  .el-message-box__header {
+    padding-bottom: 0 !important;
+  }
+
+  &__save-role {
+    max-width: 34.2rem;
+  }
+
+  &__save-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  &__save-text {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}

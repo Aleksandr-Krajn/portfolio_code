@@ -1,0 +1,56 @@
+.z-arrow-btn {
+  display: flex;
+  align-items: center;
+
+  &__arrow-wrapper {
+    width: 3.2rem;
+    height: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $light-blue-1000;
+    background: $light-blue-100;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__arrow {
+    stroke: $light-blue-1000;
+  }
+
+  &__arrow-wrapper:hover {
+    background-color: $light-blue-1000;
+  }
+
+  &__arrow-wrapper:hover &__arrow {
+    stroke: $white;
+  }
+
+  &__arrow-wrapper:active {
+    background-color: $dark-blue-1000;
+    border-color: $dark-blue-1000;
+  }
+
+  &__arrow-wrapper:active &__arrow {
+    stroke: $white;
+  }
+  
+  &__arrow-wrapper:focus {
+    border-color: $dark-blue-1000;
+  }
+
+  &__arrow-wrapper:disabled {
+    background-color: transparent;
+    border-color: $dark-grey-200;
+  }
+
+  &__arrow-wrapper:disabled &__arrow {
+    stroke: $dark-grey-200;
+  }
+
+  &__text[class]{
+    font-size: $font-lg;
+    margin-left: 1.6rem;
+    margin-bottom: 0;
+  }
+}

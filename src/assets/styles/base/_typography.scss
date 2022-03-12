@@ -1,0 +1,27 @@
+@use "sass:map";
+
+@each $typography-name, $typography-devices in $typography {
+  @each $device, $size in $devices {
+    // Проверка поддерживаемого разрешения для шрифта
+    @if map.has-key($typography-devices, $device) {
+      $is-any: $device == any;
+      $device-class-name: if($is-any, "", _#{ $device });
+      $typography-styles: map.get($typography-devices, $device);
+      @each $typography-style, $typography-values in $typography-styles {
+        .font_#{ $typography-name }#{ $device-class-name }_#{ $typography-style } {
+          @if ($is-any) {
+            font-family: $font-family;
+            font-style: normal;
+            @include bind-attrs($typography-values);
+          } @else {
+            @media screen and (min-width: ($size + 0px)) {
+              font-family: $font-family;
+              font-style: normal;
+              @include bind-attrs($typography-values);
+            }
+          }
+        }
+      }
+    }
+  }
+}
